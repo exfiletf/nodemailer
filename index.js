@@ -41,7 +41,7 @@ if(url == "/gmail"){
         
     });
     });
-}else if(url == "mail"){
+}else if(url == "/mail"){
        forms(req,(data)=>{
                
        
