@@ -41,7 +41,7 @@ if(url == "/gmail"){
         
     });
     });
-}else if(url == "/mail"){
+}else if(url == "/smtp"){
        forms(req,(data)=>{
                
        
@@ -78,7 +78,10 @@ transporter.sendMail(mailOptions, (error, info) => {
   console.log('Email sent: ' + info.response);
 });
  });
-}else{
+}else if(url == "/test"){
+res.write("test route is working");
+res.end();
+}else {
 res.write("not allowed!");
 res.end();
 }
