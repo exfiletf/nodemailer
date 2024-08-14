@@ -5,8 +5,8 @@ const app = ojp.ojparty.app();
 const forms = ojp.ojparty.forms
 
 const server = http.createServer((req,res)=>{
-        const url = "";
-if(req.url == "/mail"){
+        const url = req.url.toString().split("?")[0];
+if(url == "/mail"){
 
         res.setHeader('Access-Control-Allow-Origin','*');
     forms(req,(data)=>{
@@ -41,7 +41,7 @@ if(req.url == "/mail"){
         
     });
     });
-}else if(req.url == ""){
+}else if(url == ""){
         const nodemailer = require('nodemailer');
 
 // Replace these with your email service provider's SMTP details
@@ -76,7 +76,7 @@ transporter.sendMail(mailOptions, (error, info) => {
 });
 
 }else{
-res.write();
+res.write("not allowed!");
 res.end();
 }
 
