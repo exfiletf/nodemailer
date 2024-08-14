@@ -5,7 +5,9 @@ const app = ojp.ojparty.app();
 const forms = ojp.ojparty.forms
 
 const server = http.createServer((req,res)=>{
-    res.setHeader('Access-Control-Allow-Origin','*');
+if(req.url == "/mail"){
+
+        res.setHeader('Access-Control-Allow-Origin','*');
     forms(req,(data)=>{
         req.query = data.query;
     
@@ -38,6 +40,10 @@ const server = http.createServer((req,res)=>{
         
     });
     });
+}else{
+res.write();
+res.end();
+}
 
 });
 
