@@ -1,0 +1,10 @@
+{
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14",
+    "nodemon": "3.1.4",
+    "ojparty": "^2.0.5"
+  }
+}
