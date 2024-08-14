@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        (
+            async ()=>{
+             const t = await fetch('https://nodemailer-58f2.onrender.com/mail/?senderName=samuel&from=exfiletf@gmail.com&to=official.ojingirisamuel@gmail.com&subject=just+testing&content=Hello+world',{
+            method:"GET",
+            headers:{
+                'user':"exfiletf@gmail.com",
+                'password':"password1234@#"
+            },
+            mode:"no-cors"
+        });
+        const res = await t.text();
+        console.log(res);
+
+            }
+        )();
+    </script>
+</body>
+</html>
